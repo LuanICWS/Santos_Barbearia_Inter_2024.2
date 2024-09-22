@@ -16,8 +16,9 @@
     <!-- Ícones FontAwesome -->
     <script src="https://kit.fontawesome.com/887c519871.js" crossorigin="anonymous"></script>
     
-    <!-- Script para o slider -->
+    <!-- Scripts -->
     <script src="../js/slider.js" defer></script>
+    <script src="../js/modal.js" defer></script>
 </head>
 
 <body>
@@ -98,45 +99,182 @@
     <section id="servicos" class="serv">
         <h1>NOSSOS SERVIÇOS</h1>
         <div class="grid-container">
-            <a href="#" class="grid-item">
+            <a href="#" class="grid-item openModal" data-modal="modalCorte">
                 <img src="../assets/Servicos/1_Corte.png" alt="Corte">
                 <span>Corte</span>
             </a>
-            <a href="#" class="grid-item">
+            <a href="#" class="grid-item openModal" data-modal="modalBarba">
                 <img src="../assets/Servicos/4_Serv_Barba.png" alt="Barba">
                 <span>Barba</span>
             </a>
-            <a href="#" class="grid-item">
+            <a href="#" class="grid-item openModal" data-modal="modalCorteBarba">
                 <img src="../assets/Servicos/2_Barba.png" alt="Corte e Barba">
                 <span>Corte e Barba</span>
             </a>
-            <a href="#" class="grid-item">
+            <a href="#" class="grid-item openModal" data-modal="modalCorteFeminino">
                 <img src="../assets/Servicos/3_Corte_FM.png" alt="Corte Feminino">
                 <span>Corte Feminino</span>
             </a>
-            <a href="#" class="grid-item">
+            <a href="#" class="grid-item openModal" data-modal="modalTintura">
                 <img src="../assets/Servicos/7_Tintura.png" alt="Tintura">
                 <span>Tintura</span>
             </a>
-            <a href="#" class="grid-item">
+            <a href="#" class="grid-item openModal" data-modal="modalLavagem">
                 <img src="../assets/Servicos/6_Lavagem.png" alt="Lavagem">
                 <span>Lavagem</span>
             </a>
-            <a href="#" class="grid-item">
+            <a href="#" class="grid-item openModal" data-modal="modalLuzes">
                 <img src="../assets/Servicos/9_Luzes.png" alt="Luzes">
                 <span>Luzes</span>
             </a>
-            <a href="#" class="grid-item">
+            <a href="#" class="grid-item openModal"  data-modal="modalDepilação">
                 <img src="../assets/Servicos/5_Depilacao.png" alt="Depilação">
                 <span>Depilação</span>
             </a>
-            <a href="#" class="grid-item">
+            <a href="#" class="grid-item openModal" data-modal="modalBarboterapia">
                 <img src="../assets/Servicos/8_Barbo_Terapia.png" alt="Barboterapia">
                 <span>Barboterapia</span>
             </a>
         </div> <!-- Fechando a div grid-container -->
     </section>
 
+    <div id="modalCorte" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Tabela De Preços</h2>
+          <table>
+            <tr><th>Serviços</th><th>Preço</th></tr>
+            <tr><td>Americano</td><td>R$ 85,00</td></tr>
+            <tr><td>Degradê</td><td>R$ 85,00</td></tr>
+            <tr><td>Militar</td><td>R$ 85,00</td></tr>
+            <tr><td>Moicano</td><td>R$ 85,00</td></tr>
+            <tr><td>Undercut</td><td>R$ 85,00</td></tr>
+          </table>
+          <button class="reservar-btn">Reservar</button>
+        </div>
+      </div>
+
+      <div id="modalBarba" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Tabela De Preços</h2>
+          <table>
+            <tr><th>Serviços</th><th>Preço</th></tr>
+            <tr><td>Estilo Quadrado</td><td>R$ 50,00</td></tr>
+            <tr><td>Estilo Redondo</td><td>R$ 50,00</td></tr>
+            <tr><td>Cavanhaque</td><td>R$ 50,00</td></tr>
+            <tr><td>Barba Real</td><td>R$ 50,00</td></tr>
+            <tr><td>Circular</td><td>R$ 50,00</td></tr>
+          </table>
+          <button class="reservar-btn">Reservar</button>
+        </div>
+      </div>
+
+      <div id="modalCorteBarba" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Tabela De Preços</h2>
+          <table>
+            <tr><th>Serviços</th><th>Preço</th></tr>
+            <tr><td>Americano</td><td>R$ 85,00</td></tr>
+            <tr><td>Degradê</td><td>R$ 85,00</td></tr>
+            <tr><td>Militar</td><td>R$ 85,00</td></tr>
+            <tr><td>Moicano</td><td>R$ 85,00</td></tr>
+            <tr><td>Undercut</td><td>R$ 85,00</td></tr>
+          </table>
+          <table>
+            <tr><th>Serviços</th><th>Preço</th></tr>
+            <tr><td>Estilo Quadrado</td><td>R$ 50,00</td></tr>
+            <tr><td>Estilo Redondo</td><td>R$ 50,00</td></tr>
+            <tr><td>Cavanhaque</td><td>R$ 50,00</td></tr>
+            <tr><td>Barba Real</td><td>R$ 50,00</td></tr>
+            <tr><td>Circular</td><td>R$ 50,00</td></tr>
+          </table>
+          <button class="reservar-btn">Reservar</button>
+        </div>
+      </div>
+      
+      <div id="modalCorteFeminino" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Tabela De Preços</h2>
+          <table>
+            <tr><th>Serviços</th><th>Preço</th></tr>
+            <tr><td>Channel</td><td>R$ 150,00</td></tr>
+            <tr><td>Camadas</td><td>R$ 150,00</td></tr>
+            <tr><td>Joãozinho</td><td>R$ 150,00</td></tr>
+            <tr><td>Repicado</td><td>R$ 150,00</td></tr>
+          </table>
+          <button class="reservar-btn">Reservar</button>
+        </div>
+      </div>
+
+      <div id="modalTintura" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Tabela De Preços</h2>
+          <table>
+            <tr><th>Serviços</th><th>Preço</th></tr>
+            <tr><td>Preto</td><td>R$ 140,00</td></tr>
+            <tr><td>Castanho</td><td>R$ 140,00</td></tr>
+            <tr><td>Loiro</td><td>R$ 140,00</td></tr>
+            <tr><td>Ruivo</td><td>R$ 140,00</td></tr>
+            <tr><td>Chocolate</td><td>R$ 14 0,00</td></tr>
+          </table>
+          <button class="reservar-btn">Reservar</button>
+        </div>
+      </div>
+
+      <div id="modalLavagem" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Tabela De Preços</h2>
+          <table>
+            <tr><th>Serviços</th><th>Preço</th></tr>
+            <tr><td>Comum</td><td>R$ 50,00</td></tr>
+            <tr><td>Especial</td><td>R$ 80,00</td></tr>
+          </table>
+          <button class="reservar-btn">Reservar</button>
+        </div>
+      </div>
+
+      <div id="modalLuzes" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Tabela De Preços</h2>
+          <table>
+            <tr><th>Serviços</th><th>Preço</th></tr>
+            <tr><td>Inversas</td><td>R$ 270,00</td></tr>
+            <tr><td>Tradicionais</td><td>R$ 270,00</td></tr>
+          </table>
+          <button class="reservar-btn">Reservar</button>
+        </div>
+      </div>
+
+      <div id="modalDepilação" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Tabela De Preços</h2>
+          <table>
+            <tr><th>Serviços</th><th>Preço</th></tr>
+            <tr><td>Nariz</td><td>R$ 20,00</td></tr>
+            <tr><td>Orelha</td><td>R$ 20,00</td></tr>
+          </table>
+          <button class="reservar-btn">Reservar</button>
+        </div>
+      </div>
+
+      <div id="modalBarboterapia" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Tabela De Preços</h2>
+          <table>
+            <tr><th>Serviços</th><th>Preço</th></tr>
+            <tr><td>Barboterapia</td><td>R$ 90,00</td></tr>
+          </table>
+          <button class="reservar-btn">Reservar</button>
+        </div>
+      </div>
 </body>
 
 <footer id="footer">
