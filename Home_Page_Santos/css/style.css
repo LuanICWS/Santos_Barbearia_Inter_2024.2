@@ -1,70 +1,76 @@
+/* |---------------------1.Reset e Estilos Globais----------------------| */
+
+/* Reset Padrão da Página */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}/* Define a cor de fundo da página */
-
-body {
-    background-color: black !important;
-    color: white !important;
-
 }
 
-/* Estilo para a logo */
+/* Define a imagem de fundo para todo o site */
+body {
+    background-image: url('../assets/Fundo_Site_Barber.jpeg'); /* Coloque o caminho da sua imagem aqui */
+    background-size: cover; /* Faz a imagem cobrir toda a área do site */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    color: white; /* Mantém a cor do texto em branco */
+}
+
+
+/* |---------------------2.Logo e Slider-------------------------------| */
+
+/* Estilo para a logo no meio do slide */
 .logo {
-    position: absolute; /* Posicionamento absoluto dentro do slider */
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Move o centro da logo para o centro exato da tela */
-    z-index: 10; /* Garante que a logo fique acima das imagens do slider */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 10; 
 }
 
 .logo img {
     max-width: 400px; /* Ajuste o tamanho da logo */
-
-    
 }
 
 /* Define o tamanho e posicionamento do slider */
 .slider {
-    width: 100vw; /* Largura total da viewport */
-    height: 100vh; /* Altura total da viewport */
-    position: relative; /* Posicionamento relativo para os botões de navegação */
-    overflow: hidden; /* Esconde o conteúdo que ultrapassa o contêiner */
+    width: 100vw; 
+    height: 100vh; 
+    position: relative; 
+    overflow: hidden;
     margin: 0;
     padding: 0;
 }
 
 /* Configura o contêiner das slides para exibição em linha e animação */
 .slides {
-    display: flex; /* Exibe as slides em linha */
-    transition: transform 0.6s ease-in-out; /* Animação para a transição entre slides */
-    height: 100%; /* Altura total do contêiner de slides */
+    display: flex; 
+    transition: transform 0.6s ease-in-out; 
+    height: 100%; 
     margin: 0;
     padding: 0;
 }
 
 /* Define o tamanho e alinhamento das slides individuais */
 .slide {
-    min-width: 100vw; /* Largura mínima para cobrir a viewport */
-    height: 100vh; /* Altura mínima para cobrir a viewport */
+    min-width: 100vw; 
+    height: 100vh; 
     position: relative;
     margin: 0;
     padding: 0;
-    display: flex; /* Flexbox para centralizar o conteúdo */
-    justify-content: center; /* Alinha horizontalmente o conteúdo */
-    align-items: center; /* Alinha verticalmente o conteúdo */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
 }
 
 /* Estiliza as imagens dentro das slides */
 .slide img {
-    
-        width: 100%; /* Largura total do slide */
-        height: 100%; /* Altura total do slide */
-        object-fit: contain; /* Preserva a proporção da imagem sem cortar */
-        margin: 0;
-        padding: 0;
-    
+    width: 100%; 
+    height: 100%;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
 }
 
 .slide::after {
@@ -73,62 +79,68 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%; /* Ajuste a altura conforme necessário */
+    height: 100%; 
     box-shadow: inset 0px -10px 20px rgba(0, 0, 0, 0.8);
-    pointer-events: none; /* Para evitar interferir na interação com a imagem */
+    pointer-events: none; 
 }
+
+/* |---------------------3.Botões de Navegação---------------------------| */
 
 /* Estilo dos botões de navegação do slider */
 button {
-    top: 50%; /* Posiciona verticalmente no meio */
-    transform: translateY(-50%); /* Centraliza verticalmente */
-    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
-    color: white; /* Cor do texto */
-    border: none; /* Remove a borda padrão */
-    padding: 10px; /* Espaçamento interno */
-    cursor: pointer; /* Cursor de mão para indicar clicável */
-    font-size: 24px; /* Tamanho da fonte */
-    z-index: 100; /* Garante que os botões fiquem sobre outros conteúdos */
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: rgba(0, 0, 0, 0.356); 
+    color: white;
+    border: none; 
+    padding: 10px; 
+    cursor: pointer; 
+    font-size: 24px;
+    z-index: 100;
 }
 
 /* Estilo dos botões de navegação "anterior" e "próximo" */
 .prev {
-    position: absolute; /* Posicionamento absoluto dentro do contêiner do slider */
-    left: 10px; /* Alinha à esquerda */
+    position: absolute;
+    left: 10px;
 }
 
 .next {
-    position: absolute; /* Posicionamento absoluto dentro do contêiner do slider */
-    right: 10px; /* Alinha à direita */
+    position: absolute;
+    right: 10px;
 }
 
 button:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo mais escura no hover */
+    background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* |---------------------4.Botões e Barra de Navegação-------------------| */
 
 /* Estilo dos botões dentro do contêiner */
 .btn {
-    margin: 0 10px; /* Margem lateral entre os botões */
-    border-radius: 10px; /* Bordas arredondadas */
-    color: white; /* Cor do texto */
-    border: 1px solid black; /* Borda preta */
-    padding: 10px 20px; /* Espaçamento interno */
-}
-/* Estilo da barra de navegação */
-.navbar-nav {
-    display: flex; /* Flexbox para layout horizontal */
-    align-items: center; /* Alinha itens verticalmente */
+    margin: 0 10px; 
+    border-radius: 10px;
+    color: white;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px 20px;
 }
 
-/* Estilo dos botões na barra de navegação */
+/* Estilo da barra de navegação */
+.navbar-nav {
+    display: flex; 
+    align-items: center;
+}
+
+/* Estilo dos botões na barra de navegação Login / Cadastro*/
 .nav-item button {
-    color: white; /* Cor do texto */
-    background-color: rgb(255, 199, 89); /* Cor de fundo amarela */
-    border-radius: 15px; /* Bordas arredondadas */
-    padding: 5px 10px; /* Aumenta o padding interno dos botões */
-    border: none; /* Remove a borda padrão */
-    font-size: 18px; /* Aumenta o tamanho da fonte dos botões */
-    margin-right: 8px; /* Adiciona um pouco de margem direita para espaçamento */
+    color: white; 
+    background-color: rgb(255, 199, 89);
+    border-radius: 15px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 18px;
+    margin-right: 8px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Estilo dos links dentro dos botões */
@@ -161,48 +173,51 @@ button:hover {
     background-color: #111111; /* Substitua #333 pela cor desejada */
     padding: 0.5rem 1rem;
 }       
+
 .custom-navbar .container-fluid {
     padding: 0; /* Remove o padding do container se necessário */
 }
+
 .custom-navbar .navbar-nav {
     margin-left: auto; /* Garante que os itens sejam alinhados corretamente */
 }
+
 .custom-navbar .nav-item {
     margin: -1px; /* Remove o margin se necessário */
 }
 
+#Home_BNT {
+    font-size: larger;
+    margin-left: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* |---------------------5.Sobre o Barbeiro------------------------------| */
+
 /* Sobre o Barbeiro pag */
 
-.sobre-conteudo {
-    display: flex;
-    align-items: center; /* Centraliza verticalmente imagem e texto */
-    justify-content: space-between; /* Espaça os itens */
-    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-    margin-top: 20px;
+#sobre_barbeiro h1 {
+
+    /* Centraliza o texto "SOBRE O BARBEIRO" */
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700; /* Texto em negrito */
+    background-color: rgba(24, 24, 24, 0.8);
+    margin: 0;
 }
 
-.sobre-conteudo img {
-    max-width: 300px; /* Define o tamanho máximo da imagem */
-    width: 100%; /* Garante que a imagem se ajuste ao container */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-right: 20px; /* Adiciona espaço entre a imagem e o texto */
-    border-radius: 10px; /* Bordas levemente arredondadas (opcional) */
-}
-
-.texto {
-    max-width: 600px; /* Limita a largura do texto */
-    font-size: 1.2em; /* Aumenta o tamanho da fonte do texto */
-    line-height: 1.6; /* Espaçamento entre as linhas para melhorar a legibilidade */
-}
-
-.texto p {
-    margin: 0; /* Remove espaçamento extra ao redor do parágrafo */
-}
-
-.sobre h2 {
-    text-align: center; /* Centraliza o título */
-    font-size: 2.5em; /* Aumenta o tamanho do título */
-    margin-bottom: 20px; /* Espaço abaixo do título */
+/* texto sobre o barbeiro */
+#sobre_barbeiro p {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.6;
+    padding: 15px; 
+    background-color: rgba(24, 24, 24, 0.8);
+    color: #ffffff;
+    max-width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .sobre-conteudo {
@@ -210,7 +225,8 @@ button:hover {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 5pc;
 }
 
 .sobre-conteudo img {
@@ -221,30 +237,19 @@ button:hover {
     border-radius: 10px; /* Bordas arredondadas na imagem */
 }
 
-.texto {
-    max-width: 600px; /* Limita a largura do texto */
+.sobre_texto {
+    max-width: 810px; /* Limita a largura do texto */
 }
 
-.texto p {  /* texto sobre o barbeiro*/
-    margin: 0;
-    font-size: 1.2em;
-    line-height: 1.6;
-    padding: 15px; /* Espaçamento interno */
-    background-color: rgba(24, 24, 24, 0.8); /* Fundo branco semitransparente */
-    color: #ffffff; /* Cor do texto */
-    max-width: 100%; /* O texto ocupa todo o espaço disponível */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve ao redor do texto */
-}
+/* |---------------------6.Grid e Itens / Agendamento de servicos-------------------------------| */
 
-.sobre h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    margin-left: 100px; /* Ajuste este valor para mover o texto mais à direita */
-    color: #dae2df;
-}
-
-h1{
-    margin: 50px;
+#servicos h1 {
+    /* Centraliza o texto "AGENDE UM SERVICO" */
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700; /* Texto em negrito */
+    color: #e0e0e0;
+    background-color: rgba(24, 24, 24, 0.8);
 }
 
 .grid-container {
@@ -265,8 +270,7 @@ h1{
     text-decoration: none;
     color: #333;
     cursor: pointer;
-
-   
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .grid-item:hover {
@@ -279,25 +283,20 @@ h1{
     height: 50px; /* Altura dos ícones */
     margin-bottom: 10px;
 }
+
 .grid-item span {
     display: block;
     margin-top: 5px;
-    font-size: 16px;
-
+    font-size: 20px;
 }
 
-div img{
+/* |---------------------7.Imagens e Outros Estilos--------------------| */
+
+div img {
     margin-left: 10px;
     transition: transform 0.2s;
 }
 
-div img :hover{
+div img:hover {
     transform: scale(1.1);
-}
-
-#Home_ID{
-
-    font-size: larger;
-    margin-left: 20px;
-
 }
