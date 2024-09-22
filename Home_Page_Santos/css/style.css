@@ -245,11 +245,11 @@ button:hover {
 
 #servicos h1 {
     /* Centraliza o texto "AGENDE UM SERVICO" */
-    text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 700; /* Texto em negrito */
     color: #e0e0e0;
     background-color: rgba(24, 24, 24, 0.8);
+    text-align: center;
 }
 
 .grid-container {
@@ -307,4 +307,57 @@ div img {
 
 div img:hover {
     transform: scale(1.1);
+}
+
+/* |---------------------footer--------------------| */
+
+footer {
+    background-color: #333; /* Fundo escuro */
+    color: white; /* Texto branco */
+    padding: 20px 0; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+footer{
+    background-color: black;
+    margin-top: 50px;
+    
+}
+.footer-container {
+    
+    display: flex; /* Usa Flexbox */
+    justify-content: space-around; /* Espaça os itens igualmente */
+    align-items: center; /* Alinha verticalmente */
+    max-width: 2000px; /* Limite de largura */
+    margin: 0 auto; /* Centraliza o container */
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+    height: 170px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.footer-logo img {
+    width: 250px; /* Define o tamanho da logo */
+}
+
+.footer-icons a {
+    margin: 0 10px; /* Espaço entre os ícones */
+}
+
+.footer-icons img {
+    width: 40px; /* Define o tamanho dos ícones */
+    height: 40px; /* Tamanho dos ícones */
+    transition: transform 0.3s ease; /* Animação suave no hover */
+}
+
+
+.footer-hours p {
+    height: 70px;
+    margin: 5px 0; /* Espaçamento vertical entre as linhas de texto */
+    font-size: 14px; /* Tamanho do texto */
+}
+
+#redes h5{
+    text-align: center;
+    margin-left: 19px;
 }
