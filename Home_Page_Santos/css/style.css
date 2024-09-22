@@ -9,7 +9,7 @@
 
 /* Define a imagem de fundo para todo o site */
 body {
-    background-image: url('../assets/Fundo_Site_Barber.jpeg'); /* Coloque o caminho da sua imagem aqui */
+    background-image: url('../assets/Fundo_Site_Barber.png'); /* Coloque o caminho da sua imagem aqui */
     background-size: cover; /* Faz a imagem cobrir toda a área do site */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-position: center; /* Centraliza a imagem */
@@ -255,7 +255,7 @@ button:hover {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
-    gap: 20px; /* Espaçamento entre os itens */
+    gap: 30px; /* Espaçamento entre os itens */
     padding: 20px;
 }
 
@@ -264,26 +264,34 @@ button:hover {
     padding: 30px 20px;
     text-align: center;
     font-size: 18px;
-    border-radius: 8px;
+    border-radius: 70px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     text-decoration: none;
     color: #333;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
+
+    max-width: 200px;  /* Ajuste a largura máxima */
+    max-height: 200px; /* Ajuste a altura máxima, se necessário */
+    margin-left: 130px;
+    
 }
 
+/* Efeito de elevação ao passar o mouse */
 .grid-item:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    transform: translateY(-5px); 
     background-color: #e0e0e0;
-}
 
+}
+/* Largura e Altura dos Icones */
 .grid-item img {
-    width: 50px; /* Largura dos ícones */
-    height: 50px; /* Altura dos ícones */
+    width: 50px; /* Largura */
+    height: 50px; /* Altura */
     margin-bottom: 10px;
+    
 }
-
+/* Escrita dos servicos */
 .grid-item span {
     display: block;
     margin-top: 5px;
