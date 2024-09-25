@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Serviços - Barbearia</title>
+    <link rel="stylesheet" href="css/agendamento.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agendamento de Serviços</h1>
+
+        <form id="agendamentoForm">
+            <!-- Sessão 1: Corte -->
+            <div class="sessao">
+                <h2>Corte</h2>
+                <div class="opcoes">
+                    <label><input type="checkbox" name="corte" value="americano"> Americano</label>
+                    <label><input type="checkbox" name="corte" value="degrade"> Degradê</label>
+                    <label><input type="checkbox" name="corte" value="militar"> Militar</label>
+                    <label><input type="checkbox" name="corte" value="moicano"> Moicano</label>
+                    <label><input type="checkbox" name="corte" value="undercut"> Undercut</label>
+                </div>
+            </div>
+
+            <!-- Sessão 2: Barba -->
+            <div class="sessao">
+                <h2>Barba</h2>
+                <div class="opcoes">
+                    <label><input type="checkbox" name="barba" value="quadrado"> Estilo Quadrado</label>
+                    <label><input type="checkbox" name="barba" value="redondo"> Estilo Redondo</label>
+                    <label><input type="checkbox" name="barba" value="cavanhaque"> Cavanhaque</label>
+                    <label><input type="checkbox" name="barba" value="real"> Barba Real</label>
+                    <label><input type="checkbox" name="barba" value="circular"> Circular</label>
+                </div>
+            </div>
+
+            <!-- Sessão 3: Corte Feminino -->
+            <div class="sessao">
+                <h2>Corte Feminino</h2>
+                <div class="opcoes">
+                    <label><input type="checkbox" name="corteFeminino" value="channel"> Channel</label>
+                    <label><input type="checkbox" name="corteFeminino" value="camadas"> Camadas</label>
+                    <label><input type="checkbox" name="corteFeminino" value="joaozinho"> Joãozinho</label>
+                    <label><input type="checkbox" name="corteFeminino" value="repicado"> Repicado</label>
+                </div>
+            </div>
+
+            <!-- Sessão 4: Tintura -->
+            <div class="sessao">
+                <h2>Tintura</h2>
+                <div class="opcoes">
+                    <label><input type="checkbox" name="tintura" value="preto"> Preto</label>
+                    <label><input type="checkbox" name="tintura" value="castanho"> Castanho</label>
+                    <label><input type="checkbox" name="tintura" value="loiro"> Loiro</label>
+                    <label><input type="checkbox" name="tintura" value="ruivo"> Ruivo</label>
+                    <label><input type="checkbox" name="tintura" value="chocolate"> Chocolate</label>
+                </div>
+            </div>
+
+            <!-- Sessão 5: Lavagem -->
+            <div class="sessao">
+                <h2>Lavagem</h2>
+                <div class="opcoes">
+                    <label><input type="checkbox" name="lavagem" value="comum"> Comum</label>
+                    <label><input type="checkbox" name="lavagem" value="especial"> Especial</label>
+                </div>
+            </div>
+
+            <!-- Sessão 6: Luzes -->
+            <div class="sessao">
+                <h2>Luzes</h2>
+                <div class="opcoes">
+                    <label><input type="checkbox" name="luzes" value="inversas"> Inversas</label>
+                    <label><input type="checkbox" name="luzes" value="tradicionais"> Tradicionais</label>
+                </div>
+            </div>
+
+            <!-- Sessão 7: Depilação -->
+            <div class="sessao">
+                <h2>Depilação</h2>
+                <div class="opcoes">
+                    <label><input type="checkbox" name="depilacao" value="nariz"> Nariz</label>
+                    <label><input type="checkbox" name="depilacao" value="orelha"> Orelha</label>
+                </div>
+            </div>
+
+            <!-- Sessão 8: Barboterapia -->
+            <div class="sessao">
+                <h2>Barboterapia</h2>
+                <div class="opcoes">
+                    <label><input type="checkbox" name="barboterapia" value="barboterapia"> Barboterapia</label>
+                </div>
+            </div>
+
+            <!-- Data e Hora -->
+            <div class="sessao">
+                <h2>Data e Hora do Agendamento</h2>
+                <input type="date" id="data" required>
+                <select id="hora" required>
+                    <option value="">Selecione um horário</option>
+                </select>
+            </div>
+
+            <!-- Botão de Agendar -->
+            <button type="submit" id="agendarBtn" disabled>Agendar Serviço</button>
+        </form>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

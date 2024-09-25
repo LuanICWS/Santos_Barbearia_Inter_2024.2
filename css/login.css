@@ -1,0 +1,105 @@
+/* Estilo geral do corpo da página */
+body {
+    background: black; 
+    color: #888; 
+    font-family: Arial, Helvetica, sans-serif; 
+    height: 100vh; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+/* Imagem de fundo */
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px -20px 20px rgba(0, 0, 0, 0.6);
+    background-image: url('../assets/Cadastro-Login/vintage-border-salon-tools-wooden-table-jobs-career-concept.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    z-index: -1;
+}
+
+/* Estilo do container que envolve o formulário */
+.container {
+    text-align: center; 
+    padding: 20px; 
+    border-radius: 15px; 
+}
+
+/* Estilo do formulário */
+form {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+/* Estilo do container de cada input */
+.input-container {
+    position: relative; 
+    margin: 10px; 
+}
+
+/* Estilo dos ícones dentro dos inputs */
+.input-container i {
+    position: absolute; 
+    left: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: #888; 
+    margin-left: 150px; 
+}
+
+/* Estilo dos campos de texto, email e senha*/
+input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+    padding: 10px; 
+    border-style: none; 
+    border-radius: 15px; 
+    width: 240px; 
+    padding-left: 40px; 
+    margin-left: 150px; 
+}
+
+/* Estilo dos botões */
+button {
+    padding: 10px; 
+    font-weight: bold; 
+    border-style: none; 
+    border-radius: 15px; 
+    margin: 10px; 
+    margin-left: 150px; 
+    width: 200px;
+    cursor: pointer; 
+    background: linear-gradient(69.5deg, rgb(255, 255, 255) 2.7%, rgb(255, 255, 255) 97.2%); 
+    color: rgb(0, 0, 0); 
+}
+
+/* Estilo da logo */
+img {
+    width: 450px; 
+    height: 350px; 
+}
+
+/* Estilo do cadastro (h1) */
+h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: white; 
+    margin-left: 150px; 
+}
+
+p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+    margin-left: 150px; /* Move o Botao mais pra direita*/
+}
+
+a {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: rgb(7, 97, 214);
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CADASTRO</title>
+    <!--Ligação do HTML com CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/cadastro.css"> <!-- CSS Externo -->
+</head>
+
+<body>
+
+    <div class="background">
+        
+    </div>
+
+    <!--Imagem Marca DaGua-->
+    <img src="assets/Cadastro-Login/PNH-MARCA-DAGUA-2---SANTOS.png" alt="">
+    <!--Container dos inputs-->
+    <div class="container">
+
+        <h1>Cadastre-se</h1>
+        
+        <form action="/submit_form" method="POST">
+
+            <!--Nome-->
+            <div class="input-container">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+            </div>
+
+            <!--email-->
+            <div class="input-container">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <!--senha-->
+            <div class="input-container">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Senha" required>
+            </div>
+
+            <!--telefone-->
+            <div class="input-container">
+                <i class="fa-solid fa-phone"></i>
+                <input type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+            </div>
+
+            <!--cpf-->
+            <div class="input-container">
+                <i class="fa-solid fa-id-card"></i>
+                <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
+            </div>
+
+            <!--data-->
+            <div class="input-container">
+                <i class="fa-solid fa-calendar"></i>
+                <input type="date" id="nascimento" name="nascimento" required>
+            </div>
+
+            <!--radios-->
+            <div class="radio-group">
+                <i class="fa-solid fa-user"></i>
+                <span>Sexo:</span>
+                <input type="radio" id="masc" name="sexo" value="h">
+                <label for="masc">Masculino</label>
+                <input type="radio" id="fem" name="sexo" value="f">
+                <label for="fem">Feminino</label>
+            </div>
+
+            <!--checkboxes-->
+            <div class="checkbox-group">
+                <input type="checkbox" id="autoriza">
+                <label for="autoriza">Autoriza o uso de dados pela ferramenta de acordo com a LGPD</label>
+                <br>
+                <input type="checkbox" id="confirma">
+                <label for="confirma">Confirma o envio de promoções por email</label>
+            </div>
+
+            <!--botão-->
+            <button type="submit">Cadastrar</button>        
+        </form>
+    </div>
+</body>
+
+</html>
