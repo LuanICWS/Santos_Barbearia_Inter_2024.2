@@ -28,8 +28,20 @@ function changeSlide(direction) {
     // Isso move o carrossel horizontalmente para o slide correspondente.
     document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
 }
-
-// Função para iniciar a transição automática
+// Função para inicializar o carrossel
+function initCarousel(interval = 5000, direction = 1) {
+    const slides = document.querySelectorAll('.slide');
+    const slidesContainer = document.querySelector('.slides');
+    let currentIndex = 0;
+  
+    function changeSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = slides.length - 1;
+      if (currentIndex >= slides.length) currentIndex = 0;
+      slidesContainer.style.transform = `translateX(${-currentIndex * 100}%)`;
+    }
+  
+    // Função para iniciar a transição automática
     function autoSlide() {
       setInterval(() => {
         changeSlide(direction);
