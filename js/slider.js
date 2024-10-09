@@ -28,3 +28,18 @@ function changeSlide(direction) {
     // Isso move o carrossel horizontalmente para o slide correspondente.
     document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
 }
+
+// Função para iniciar a transição automática
+    function autoSlide() {
+      setInterval(() => {
+        changeSlide(direction);
+      }, interval);
+    }
+  
+    autoSlide(); // Inicia a transição automaticamente
+  
+    // Adicione aqui qualquer outro evento ou funcionalidade, como botões de navegação, pausa, etc.
+  }
+  
+  // Chamando a função para inicializar o carrossel
+  initCarousel();
