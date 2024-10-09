@@ -110,10 +110,6 @@ button {
     right: 10px;
 }
 
-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
 /* |---------------------4.Botões e Barra de Navegação-------------------| */
 
 /* Estilo dos botões dentro do contêiner */
