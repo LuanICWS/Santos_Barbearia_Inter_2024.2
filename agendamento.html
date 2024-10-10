@@ -15,11 +15,11 @@
             <div class="sessao">
                 <h2>Corte</h2>
                 <div class="opcoes">
-                    <label><input type="checkbox" name="corte" value="americano"> Americano</label>
-                    <label><input type="checkbox" name="corte" value="degrade"> Degradê</label>
-                    <label><input type="checkbox" name="corte" value="militar"> Militar</label>
-                    <label><input type="checkbox" name="corte" value="moicano"> Moicano</label>
-                    <label><input type="checkbox" name="corte" value="undercut"> Undercut</label>
+                    <label><input type="radio" name="corte" value="americano"> Americano</label>
+                    <label><input type="radio" name="corte" value="degrade"> Degradê</label>
+                    <label><input type="radio" name="corte" value="militar"> Militar</label>
+                    <label><input type="radio" name="corte" value="moicano"> Moicano</label>
+                    <label><input type="radio" name="corte" value="undercut"> Undercut</label>
                 </div>
             </div>
 
@@ -27,11 +27,11 @@
             <div class="sessao">
                 <h2>Barba</h2>
                 <div class="opcoes">
-                    <label><input type="checkbox" name="barba" value="quadrado"> Estilo Quadrado</label>
-                    <label><input type="checkbox" name="barba" value="redondo"> Estilo Redondo</label>
-                    <label><input type="checkbox" name="barba" value="cavanhaque"> Cavanhaque</label>
-                    <label><input type="checkbox" name="barba" value="real"> Barba Real</label>
-                    <label><input type="checkbox" name="barba" value="circular"> Circular</label>
+                    <label><input type="radio" name="barba" value="quadrado"> Estilo Quadrado</label>
+                    <label><input type="radio" name="barba" value="redondo"> Estilo Redondo</label>
+                    <label><input type="radio" name="barba" value="cavanhaque"> Cavanhaque</label>
+                    <label><input type="radio" name="barba" value="real"> Barba Real</label>
+                    <label><input type="radio" name="barba" value="circular"> Circular</label>
                 </div>
             </div>
 
@@ -39,10 +39,10 @@
             <div class="sessao">
                 <h2>Corte Feminino</h2>
                 <div class="opcoes">
-                    <label><input type="checkbox" name="corteFeminino" value="channel"> Channel</label>
-                    <label><input type="checkbox" name="corteFeminino" value="camadas"> Camadas</label>
-                    <label><input type="checkbox" name="corteFeminino" value="joaozinho"> Joãozinho</label>
-                    <label><input type="checkbox" name="corteFeminino" value="repicado"> Repicado</label>
+                    <label><input type="radio" name="corteFeminino" value="channel"> Channel</label>
+                    <label><input type="radio" name="corteFeminino" value="camadas"> Camadas</label>
+                    <label><input type="radio" name="corteFeminino" value="joaozinho"> Joãozinho</label>
+                    <label><input type="radio" name="corteFeminino" value="repicado"> Repicado</label>
                 </div>
             </div>
 
@@ -50,11 +50,11 @@
             <div class="sessao">
                 <h2>Tintura</h2>
                 <div class="opcoes">
-                    <label><input type="checkbox" name="tintura" value="preto"> Preto</label>
-                    <label><input type="checkbox" name="tintura" value="castanho"> Castanho</label>
-                    <label><input type="checkbox" name="tintura" value="loiro"> Loiro</label>
-                    <label><input type="checkbox" name="tintura" value="ruivo"> Ruivo</label>
-                    <label><input type="checkbox" name="tintura" value="chocolate"> Chocolate</label>
+                    <label><input type="radio" name="tintura" value="preto"> Preto</label>
+                    <label><input type="radio" name="tintura" value="castanho"> Castanho</label>
+                    <label><input type="radio" name="tintura" value="loiro"> Loiro</label>
+                    <label><input type="radio" name="tintura" value="ruivo"> Ruivo</label>
+                    <label><input type="radio" name="tintura" value="chocolate"> Chocolate</label>
                 </div>
             </div>
 
@@ -62,8 +62,8 @@
             <div class="sessao">
                 <h2>Lavagem</h2>
                 <div class="opcoes">
-                    <label><input type="checkbox" name="lavagem" value="comum"> Comum</label>
-                    <label><input type="checkbox" name="lavagem" value="especial"> Especial</label>
+                    <label><input type="radio" name="lavagem" value="comum"> Comum</label>
+                    <label><input type="radio" name="lavagem" value="especial"> Especial</label>
                 </div>
             </div>
 
@@ -71,8 +71,8 @@
             <div class="sessao">
                 <h2>Luzes</h2>
                 <div class="opcoes">
-                    <label><input type="checkbox" name="luzes" value="inversas"> Inversas</label>
-                    <label><input type="checkbox" name="luzes" value="tradicionais"> Tradicionais</label>
+                    <label><input type="radio" name="luzes" value="inversas"> Inversas</label>
+                    <label><input type="radio" name="luzes" value="tradicionais"> Tradicionais</label>
                 </div>
             </div>
 
@@ -89,12 +89,20 @@
             <div class="sessao">
                 <h2>Barboterapia</h2>
                 <div class="opcoes">
-                    <label><input type="checkbox" name="barboterapia" value="barboterapia"> Barboterapia</label>
+                    <label><input type="radio" name="barboterapia" value="barboterapia"> Barboterapia</label>
+                </div>
+            </div>
+
+            <!-- Sessão 9: Nanoblading -->
+            <div class="sessao">
+                <h2>Nanoblading</h2>
+                <div class="opcoes">
+                    <label><input type="radio" name="nanoblading" value="nanoblading"> Nanoblading</label>
                 </div>
             </div>
 
             <!-- Data e Hora -->
-            <div class="sessao">
+            <div class="sessao agendamento">
                 <h2>Data e Hora do Agendamento</h2>
                 <input type="date" id="data" required>
                 <select id="hora" required>

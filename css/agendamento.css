@@ -7,6 +7,10 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
+  background-image: url('../assets/Servicos/Fundo_Agendamento.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,69 +19,164 @@ body {
 }
 
 .container {
-  background-color: #fff;
+  background-color: #f1f1f1;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px; 
   width: 100%;
-  height: 100%;
-  max-height: 90vh; /* Limita a altura do container */
-  overflow-y: auto; /* Permite rolar quando o conteúdo ultrapassa o limite */
+  margin: 0 auto;
+  max-height: 95vh;
+  overflow-y: auto;
 }
 
 h1 {
   text-align: center;
+  color: #333;
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
 .sessao {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
 .sessao h2 {
+  font-size: 20px;
+  color: #2e2e2e;
   margin-bottom: 10px;
-  font-size: 1.2em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+#agendamentoForm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
 }
 
 .opcoes {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
+
+.agendamento {
+  grid-column: 2 / span 1;
+}
+
+.opcoes {
+  display: block;
+}
+
+.opcoes label {
+  display: block;
+  background-color: #f7f7f7;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.opcoes label:hover {
+  background-color: #e0e0e0;
+}
+
 
 input[type="date"], input[type="time"] {
   width: calc(50% - 5px);
   margin-right: 5px;
 }
 
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+
 #resultado {
   margin-top: 20px;
-  padding: 10px;
-  background-color: #e0ffe0;
-  border: 1px solid #00cc00;
+  padding: 15px;
+  background-color: #d4edda;
+  border-left: 5px solid #28a745;
+  color: #155724;
   border-radius: 5px;
-  color: #006600;
-  display: none; /* Esconde até que seja usada */
+  display: none;
+}
+
+#resultado.error {
+  background-color: #f8d7da;
+  border-left: 5px solid #dc3545;
+  color: #721c24;
 }
 
 button {
+  grid-column: span 3;
   width: 100%;
   padding: 10px;
   background-color: #28a745;
-  color: white;
   border: none;
+  color: white;
+  font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
 button:disabled {
-  background-color: #cccccc;
+  background-color: #ccc;
   cursor: not-allowed;
 }
 
-button:hover:not(:disabled) {
+button:hover:enabled {
   background-color: #218838;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  body {
+      overflow-y: auto; 
+  }
+
+  .container {
+      height: 100vh;
+      overflow-y: auto;
+  }
+
+  #agendamentoForm {
+      grid-template-columns: 1fr;
+  }
+
+  .agendamento {
+    grid-column: span 1;
+}
+
+  button {
+      grid-column: span 1;
+  }
 }

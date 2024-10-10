@@ -40,10 +40,10 @@
                         <a class="nav-link text-white active" aria-current="page" href="#top">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#servicos">Serviços</a>
+                      <a class="nav-link text-white active" aria-disabled="true" href="#sobre-o-barbeiro">Sobre o profissional</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white active" aria-disabled="true" href="#sobre-o-barbeiro">Sobre o profissional</a>
+                        <a class="nav-link text-white" href="#servicos">Serviços</a>
                     </li>
                 </ul>
 
@@ -107,10 +107,6 @@
                 <img src="../assets/Servicos/4_Serv_Barba.png" alt="Barba">
                 <span>Barba</span>
             </a>
-            <a href="#" class="grid-item openModal" data-modal="modalCorteBarba">
-                <img src="../assets/Servicos/2_Barba.png" alt="Corte e Barba">
-                <span>Corte e Barba</span>
-            </a>
             <a href="#" class="grid-item openModal" data-modal="modalCorteFeminino">
                 <img src="../assets/Servicos/3_Corte_FM.png" alt="Corte Feminino">
                 <span>Corte Feminino</span>
@@ -135,6 +131,10 @@
                 <img src="../assets/Servicos/8_Barbo_Terapia.png" alt="Barboterapia">
                 <span>Barboterapia</span>
             </a>
+            <a href="#" class="grid-item openModal" data-modal="modalNanoBlading">
+              <img src="../assets/Servicos/2_Barba.png" alt="Nanoblading">
+              <span>Nanoblading</span>
+          </a>
         </div> <!-- Fechando a div grid-container -->
     </section>
 
@@ -158,30 +158,6 @@
         <div class="modal-content">
           <span class="close">&times;</span>
           <h2>Tabela De Preços</h2>
-          <table>
-            <tr><th>Serviços</th><th>Preço</th></tr>
-            <tr><td>Estilo Quadrado</td><td>R$ 50,00</td></tr>
-            <tr><td>Estilo Redondo</td><td>R$ 50,00</td></tr>
-            <tr><td>Cavanhaque</td><td>R$ 50,00</td></tr>
-            <tr><td>Barba Real</td><td>R$ 50,00</td></tr>
-            <tr><td>Circular</td><td>R$ 50,00</td></tr>
-          </table>
-          <a href="agendamento.html"><button class="reservar-btn">Conecte-se para fazer seu agendamento</button></a>
-        </div>
-      </div>
-
-      <div id="modalCorteBarba" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2>Tabela De Preços</h2>
-          <table>
-            <tr><th>Serviços</th><th>Preço</th></tr>
-            <tr><td>Americano</td><td>R$ 85,00</td></tr>
-            <tr><td>Degradê</td><td>R$ 85,00</td></tr>
-            <tr><td>Militar</td><td>R$ 85,00</td></tr>
-            <tr><td>Moicano</td><td>R$ 85,00</td></tr>
-            <tr><td>Undercut</td><td>R$ 85,00</td></tr>
-          </table>
           <table>
             <tr><th>Serviços</th><th>Preço</th></tr>
             <tr><td>Estilo Quadrado</td><td>R$ 50,00</td></tr>
@@ -271,6 +247,18 @@
           <table>
             <tr><th>Serviços</th><th>Preço</th></tr>
             <tr><td>Barboterapia</td><td>R$ 90,00</td></tr>
+          </table>
+          <a href="agendamento.html"><button class="reservar-btn">Conecte-se para fazer seu agendamento</button></a>
+        </div>
+      </div>
+
+      <div id="modalNanoBlading" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Tabela De Preços</h2>
+          <table>
+            <tr><th>Serviços</th><th>Preço</th></tr>
+            <tr><td>Nanoblading</td><td>R$ 1500,00</td></tr>
           </table>
           <a href="agendamento.html"><button class="reservar-btn">Conecte-se para fazer seu agendamento</button></a>
         </div>
