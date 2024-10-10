@@ -103,3 +103,41 @@ a {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     color: rgb(7, 97, 214);
 }
+
+@media (max-width: 768px) {
+    body{
+        flex-direction: column;
+    }
+
+    .background {
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+
+    img {
+        width: 80%;
+        height: auto;
+        
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], input[type="date"], button {
+        width: 80%;
+        padding: 10px;
+        margin-left: 0;
+    }
+    
+    p {
+        margin-left: 0;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .input-container i {
+        margin-left: 150px;
+    }
+
+
+}
