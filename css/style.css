@@ -110,10 +110,6 @@ button {
     right: 10px;
 }
 
-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
 /* |---------------------4.Botões e Barra de Navegação-------------------| */
 
 /* Estilo dos botões dentro do contêiner */
@@ -123,6 +119,7 @@ button:hover {
     color: white;
     border: 1px solid rgb(0, 0, 0);
     padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Estilo da barra de navegação */
@@ -133,6 +130,7 @@ button:hover {
 
 /* Estilo dos botões na barra de navegação Login / Cadastro*/
 .nav-item button {
+    background: linear-gradient(to right, #f6e7e7, #d8900b); /* Gradiente no fundo da navbar nos botões de logine cadastro */
     color: white; 
     background-color: rgb(255, 199, 89);
     border-radius: 15px;
@@ -140,7 +138,7 @@ button:hover {
     border: none;
     font-size: 18px;
     margin-right: 8px;
-    font-family: 'Times New Roman', Times, serif;
+     font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Estilo dos links dentro dos botões */
