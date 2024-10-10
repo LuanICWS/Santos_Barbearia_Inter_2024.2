@@ -112,7 +112,7 @@ document.getElementById("agendamentoForm").addEventListener("submit", function (
     const data = document.getElementById("data").value;
     const hora = document.getElementById("hora").value;
 
-    const confirmar = confirm(`Deseja realmente agendar para ${data} às ${hora}?`);
+    const confirmar = confirm(`Deseja realmente agendar para ${data} às ${hora} horas?`);
 
     if (confirmar) {
         alert("Agendamento confirmado com sucesso!");
