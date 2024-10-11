@@ -123,3 +123,50 @@ h1 {
     margin-left: 150px; 
 }
 
+@media (max-width: 768px) {
+    body{
+        flex-direction: column;
+    }
+
+    .background {
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+
+    img{
+        width: 200px;
+        height: auto;
+    }
+
+    .container{
+        padding: 0px;
+    }
+
+    h1{
+        display: none;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+        margin-left: 0px;
+    }
+
+    .input-container i {
+        margin-left: 0;
+    }
+
+    .radio-group {
+        margin-left: 0px;
+    }
+
+    .checkbox-group {
+        margin-left: 0px;
+        width: 70%;
+    }
+
+    button{
+        margin-left: 0px;
+    }  
+
+}
+
