@@ -80,6 +80,10 @@ button {
     color: rgb(0, 0, 0); 
 }
 
+button:hover {
+    background: linear-gradient(69.5deg, rgb(214, 214, 214) 2.7%, rgb(214, 214, 214) 97.2%); 
+}
+
 /* Estilo do grupo de rádio (sexo) */
 .radio-group {
     margin: 10px; 
