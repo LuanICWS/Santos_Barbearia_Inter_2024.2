@@ -15,7 +15,7 @@ body {
     background-position: center; /* Centraliza a imagem */
     background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
     color: white; /* Mantém a cor do texto em branco */
-    overflow-x: hidden;
+    font-size: 16px; /* Define o tamanho da fonte base */
 }
 
 
@@ -111,6 +111,8 @@ button {
     right: 10px;
 }
 
+
+
 /* |---------------------4.Botões e Barra de Navegação-------------------| */
 
 /* Estilo dos botões dentro do contêiner */
@@ -124,17 +126,16 @@ button {
 }
 
 /* Estilo da barra de navegação */
-nav{
-    position: fixed;
-}
 .navbar-nav {
-    display: flex;
+    display: flex; 
     align-items: center;
+    flex-direction: column;
 }
 
 /* Estilo dos botões na barra de navegação Login / Cadastro*/
 .nav-item button {
-    background: linear-gradient(to right, #f6e7e7, #d8900b); /* Gradiente no fundo da navbar nos botões de logine cadastro */
+    background: linear-gradient(to right, #f6e7e7, #d8900b); /* Gradiente no fundo da navbar */
+
     color: white; 
     background-color: rgb(255, 199, 89);
     border-radius: 15px;
@@ -142,7 +143,7 @@ nav{
     border: none;
     font-size: 18px;
     margin-right: 8px;
-     font-family: Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 /* Estilo dos links dentro dos botões */
@@ -174,10 +175,12 @@ nav{
 .custom-navbar {
     background-color: #111111; /* Substitua #333 pela cor desejada */
     padding: 0.5rem 1rem;
+    opacity: 0.8; /* Define a opacidade da navbar */
 }       
 
 .custom-navbar .container-fluid {
     padding: 0; /* Remove o padding do container se necessário */
+    
 }
 
 .custom-navbar .navbar-nav {
@@ -191,7 +194,7 @@ nav{
 #Home_BNT {
     font-size: larger;
     margin-left: 30px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 /* |---------------------5.Sobre o Barbeiro------------------------------| */
@@ -219,7 +222,7 @@ nav{
     color: #ffffff;
     max-width: 100%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: 'Times New Roman', Times, serif;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 .sobre-conteudo {
@@ -232,7 +235,7 @@ nav{
 }
 
 .sobre-conteudo img {
-    max-width: 400px; /* Define o tamanho máximo da imagem */
+    max-width: 380px; /* Define o tamanho máximo da imagem */
     width: 100%;
     height: auto; /* Mantém a proporção da imagem */
     margin-right: 20px; /* Espaçamento entre a imagem e o texto */
@@ -266,13 +269,13 @@ nav{
     padding: 30px 20px;
     text-align: center;
     font-size: 18px;
-    border-radius: 70px;
+    border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     text-decoration: none;
     color: #333;
     cursor: pointer;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:Arial, Helvetica, sans-serif;
 
     max-width: 200px;  /* Ajuste a largura máxima */
     max-height: 200px; /* Ajuste a altura máxima, se necessário */
@@ -352,7 +355,7 @@ nav{
   }
   
   .close:hover {
-    color: #ff0000;
+    color: #000;
   }
 
   .modal-content a {
@@ -410,7 +413,7 @@ footer{
     margin: 0 auto; /* Centraliza o container */
     flex-wrap: wrap; /* Permite quebra de linha se necessário */
     height: 170px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:Arial, Helvetica, sans-serif
     
 }
 
@@ -438,85 +441,4 @@ footer{
 #redes h5{
     text-align: center;
     margin-left: 19px;
-}
-
-/* |---------------------1.Reset e Estilos Globais----------------------| */
-
-/* Reset Padrão da Página */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Define a imagem de fundo para todo o site */
-body {
-    background-image: url('../assets/Fundo_Site_Barber.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
-    overflow-x: hidden;
-}
-
-
-/* |---------------------2.Logo e Slider-------------------------------| */
-
-.logo {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    z-index: 10; 
-}
-
-.logo img {
-    max-width: 400px;
-}
-
-.slider {
-    width: 100vw; 
-    height: 100vh; 
-    position: relative; 
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.slides {
-    display: flex; 
-    transition: transform 0.6s ease-in-out; 
-    height: 100%; 
-    margin: 0;
-    padding: 0;
-}
-
-.slide {
-    min-width: 100vw; 
-    height: 100vh; 
-    position: relative;
-    margin: 0;
-    padding: 0;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-}
-
-.slide img {
-    width: 100%; 
-    height: 100%;
-    object-fit: contain;
-    margin: 0;
-    padding: 0;
-}
-
-.slide::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%; 
-    
 }
