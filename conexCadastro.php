@@ -17,8 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data_do_servico = null;
     $hora_do_servico = null;
 
-    $sql = "INSERT INTO cadastro (usuario_nome_completo, usuario_email, usuario_senha, usuario_telefone, usuario_cpf, usuario_data_de_nascimento, usuario_sexo, usuario_termos_obrigatorios, usuario_incricao_newsletter, servicos, data_do_servico, hora_do_servico) 
-            VALUES ('$nome', '$email', '$senha', '$telefone', '$cpf', '$nascimento', '$sexo', '$termos', '$newsletter', '$servicos', NULL, NULL)"; // Inserir NULL diretamente no SQL
+    $sql = "INSERT INTO cadastro (usuario_nome_completo, usuario_email, usuario_senha, usuario_telefone, usuario_cpf, usuario_data_de_nascimento, usuario_sexo, usuario_termos_obrigatorios, usuario_incricao_newsletter) 
+            VALUES ('$nome', '$email', '$senha', '$telefone', '$cpf', '$nascimento', '$sexo', '$termos', '$newsletter')"; // Inserir NULL diretamente no SQL
 
     if ($conn->query($sql) === TRUE) {
         echo "Cadastro realizado com sucesso!";
