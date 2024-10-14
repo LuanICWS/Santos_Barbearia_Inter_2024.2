@@ -14,13 +14,14 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema barbearia_santos
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `barbearia_santos` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
-USE `barbearia_santos` ;
+-- CREATE SCHEMA IF NOT EXISTS `barbearia_santos` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+-- Esse é o nome do banco 'y4l7y7v3pdk47h8m' foi automático do deploy
+USE `y4l7y7v3pdk47h8m` ;
 
 -- -----------------------------------------------------
 -- Table `barbearia_santos`.`cadastro`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `barbearia_santos`.`cadastro` (
+CREATE TABLE IF NOT EXISTS `y4l7y7v3pdk47h8m`.`cadastro` (
   `usuario_nome_completo` VARCHAR(100) NOT NULL,
   `usuario_email` VARCHAR(255) NOT NULL,
   `usuario_senha` VARCHAR(255) NOT NULL,
@@ -32,9 +33,9 @@ CREATE TABLE IF NOT EXISTS `barbearia_santos`.`cadastro` (
   `usuario_termos_obrigatorios` TINYINT(1) NOT NULL,
   `usuario_incricao_newsletter` TINYINT(1) NULL DEFAULT NULL,
   PRIMARY KEY (`usuario_id`),
-  UNIQUE INDEX `cpf` (`usuario_cpf` ASC) VISIBLE,
-  UNIQUE INDEX `email` (`usuario_email` ASC) VISIBLE)
-ENGINE = InnoDB
+  UNIQUE INDEX `cpf` (`usuario_cpf` ASC),
+  UNIQUE INDEX `email` (`usuario_email` ASC))
+  ENGINE = InnoDB
 AUTO_INCREMENT = 5
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -43,7 +44,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 -- Table `barbearia_santos`.`login`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `barbearia_santos`.`login` (
+CREATE TABLE IF NOT EXISTS `y4l7y7v3pdk47h8m`.`login` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `usuario_nome_completo` VARCHAR(100) NOT NULL,
   `usuario_email` VARCHAR(255) NOT NULL,
@@ -56,13 +57,13 @@ CREATE TABLE IF NOT EXISTS `barbearia_santos`.`login` (
   `usuario_termos_obrigatorios` TINYINT(1) NOT NULL,
   `usuario_incricao_newsletter` TINYINT(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `usuario_email` (`usuario_email` ASC) VISIBLE)
+  UNIQUE INDEX `usuario_email` (`usuario_email` ASC))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
 
-CREATE TABLE IF NOT EXISTS `barbearia_santos`.`agendamentos` (
+CREATE TABLE IF NOT EXISTS `y4l7y7v3pdk47h8m`.`agendamentos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `usuario_nome_completo` VARCHAR(100) NOT NULL,
   `usuario_email` VARCHAR(255) NOT NULL,
@@ -73,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `barbearia_santos`.`agendamentos` (
   `data_criacao` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 );
-CREATE TABLE IF NOT EXISTS `barbearia_santos`.`servicos` (
+CREATE TABLE IF NOT EXISTS `y4l7y7v3pdk47h8m`.`servicos` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `nome_servico` VARCHAR(100) NOT NULL,
     `descricao` TEXT NULL,
@@ -86,7 +87,5 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-
-
 SELECT * FROM cadastro;
-SELECT * FROM agendamentos
+SELECT * FROM agendamentos;
