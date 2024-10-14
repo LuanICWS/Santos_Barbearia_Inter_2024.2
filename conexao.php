@@ -1,9 +1,8 @@
 <?php
-$servername = "localhost"; // Alterar se o servidor for diferente
-$username = "root"; // Nome de usuário do MySQL
-$password = "root"; // Senha do MySQL
-$dbname = "barbearia_santos"; // Nome do banco de dados
-
+$servername = "k9xdebw4k3zynl4u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$username = "jdocjo0qr6n7fswm";
+$password = "ot4rv2hrpywqbwvp";
+$dbname = "y4l7y7v3pdk47h8m";
 // Criar conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
 
