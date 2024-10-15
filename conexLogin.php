@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usuario_id'] = $row['usuario_id']; // Armazena o ID do usuário para a sessão
             header('Location: agendamento.html'); // Redireciona para a página de agendamento
         } else {
-            echo "Senha incorreta!";
+            echo "Dados inseridos incorretamente!";
         }
     } else {
         echo "Nenhum usuário encontrado com este email!";

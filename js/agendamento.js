@@ -15,7 +15,6 @@ function gerarHorarios(data) {
         horaInicio = 9;
         horaFim = 14;
     } else {
-       
         return;
     }
 
@@ -35,68 +34,44 @@ document.getElementById('data').addEventListener('change', function() {
     gerarHorarios(data); // Gerar horários com base na data
 });
 
-// Verifica se um serviço foi selecionado e se a data e hora estão preenchidos
-document.getElementById('agendamentoForm').addEventListener('input', function() {
-    const checkboxesCorte = document.querySelectorAll('input[name="corte"]:checked');
-    const checkboxesBarba = document.querySelectorAll('input[name="barba"]:checked');
-    const checkboxesNanoblading = document.querySelectorAll('input[name="nanoblading"]:checked');
-    const checkboxesCorteFeminino = document.querySelectorAll('input[name="corteFeminino"]:checked');
-    const checkboxesTintura = document.querySelectorAll('input[name="tintura"]:checked');
-    const checkboxesLavagem = document.querySelectorAll('input[name="lavagem"]:checked');
-    const checkboxesLuzes = document.querySelectorAll('input[name="luzes"]:checked');
-    const checkboxesDepilacao = document.querySelectorAll('input[name="depilacao"]:checked');
-    const checkboxesBarboterapia = document.querySelectorAll('input[name="barboterapia"]:checked');
+// Função para verificar se um serviço foi selecionado e se a data e hora estão preenchidos
+function verificarFormulario() {
+    const checkboxes = document.querySelectorAll('input[name="servicos[]"]:checked'); // Serviços gerais
     const data = document.getElementById('data').value;
     const hora = document.getElementById('hora').value;
 
-    const servicoSelecionado = checkboxesCorte.length > 0 || checkboxesBarba.length > 0 || checkboxesNanoblading.length > 0 || checkboxesCorteFeminino.length > 0 ||
-                               checkboxesTintura.length > 0 || checkboxesLavagem.length > 0 || checkboxesLuzes.length > 0 ||
-                               checkboxesDepilacao.length > 0 || checkboxesBarboterapia.length > 0;
+    // Verifica se ao menos um serviço foi selecionado ou Nanoblading
+    const servicoSelecionado = (checkboxes.length > 0);
     const dataHoraPreenchidos = (data !== "") && (hora !== "");
 
     const agendarBtn = document.getElementById('agendarBtn');
+
+    // Habilita o botão somente se um serviço, data e hora forem preenchidos
     agendarBtn.disabled = !(servicoSelecionado && dataHoraPreenchidos);
-});
+}
+
+// Listener para monitorar qualquer mudança nos checkboxes, data ou hora
+document.getElementById('agendamentoForm').addEventListener('change', verificarFormulario);
+
+// Listener para monitorar especificamente mudanças na data e hora
+document.getElementById('data').addEventListener('change', verificarFormulario);
+document.getElementById('hora').addEventListener('change', verificarFormulario);
 
 // Listener para enviar o formulário
 document.getElementById('agendamentoForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const checkboxesCorte = document.querySelectorAll('input[name="corte"]:checked');
-    const checkboxesBarba = document.querySelectorAll('input[name="barba"]:checked');
-    const checkboxesNanoblading = document.querySelectorAll('input[name="nanoblading"]:checked');
-    const checkboxesCorteFeminino = document.querySelectorAll('input[name="corteFeminino"]:checked');
-    const checkboxesTintura = document.querySelectorAll('input[name="tintura"]:checked');
-    const checkboxesLavagem = document.querySelectorAll('input[name="lavagem"]:checked');
-    const checkboxesLuzes = document.querySelectorAll('input[name="luzes"]:checked');
-    const checkboxesDepilacao = document.querySelectorAll('input[name="depilacao"]:checked');
-    const checkboxesBarboterapia = document.querySelectorAll('input[name="barboterapia"]:checked');
+    const checkboxes = document.querySelectorAll('input[name="servicos[]"]:checked');
     const data = document.getElementById('data').value;
     const hora = document.getElementById('hora').value;
 
-    const servicosCorte = Array.from(checkboxesCorte).map(checkbox => checkbox.value).join(', ');
-    const servicosBarba = Array.from(checkboxesBarba).map(checkbox => checkbox.value).join(', ');
-    const servicosNanoblading = Array.from(checkboxesNanoblading).map(checkbox => checkbox.value).join(', ');
-    const servicosCorteFeminino = Array.from(checkboxesCorteFeminino).map(checkbox => checkbox.value).join(', ');
-    const servicosTintura = Array.from(checkboxesTintura).map(checkbox => checkbox.value).join(', ');
-    const servicosLavagem = Array.from(checkboxesLavagem).map(checkbox => checkbox.value).join(', ');
-    const servicosLuzes = Array.from(checkboxesLuzes).map(checkbox => checkbox.value).join(', ');
-    const servicosDepilacao = Array.from(checkboxesDepilacao).map(checkbox => checkbox.value).join(', ');
-    const servicosBarboterapia = Array.from(checkboxesBarboterapia).map(checkbox => checkbox.value).join(', ');
+    const servicosSelecionados = Array.from(checkboxes).map(checkbox => checkbox.value).join(', ');
 
     const resultado = document.getElementById('resultado');
 
     if (data && hora) {
         let mensagem = `Serviço agendado para ${data} às ${hora}.`;
-        if (servicosCorte) mensagem += ` Corte: ${servicosCorte}.`;
-        if (servicosBarba) mensagem += ` Barba: ${servicosBarba}.`;
-        if (servicosNanoblading) mensagem += ` Nanoblading: ${servicosNanoblading}.`;
-        if (servicosCorteFeminino) mensagem += ` Corte Feminino: ${servicosCorteFeminino}.`;
-        if (servicosTintura) mensagem += ` Tintura: ${servicosTintura}.`;
-        if (servicosLavagem) mensagem += ` Lavagem: ${servicosLavagem}.`;
-        if (servicosLuzes) mensagem += ` Luzes: ${servicosLuzes}.`;
-        if (servicosDepilacao) mensagem += ` Depilação: ${servicosDepilacao}.`;
-        if (servicosBarboterapia) mensagem += ` Barboterapia: ${servicosBarboterapia}.`;
+        if (servicosSelecionados) mensagem += ` Serviços: ${servicosSelecionados}.`;
 
         resultado.textContent = mensagem;
         resultado.style.display = 'block';
@@ -106,6 +81,7 @@ document.getElementById('agendamentoForm').addEventListener('submit', function(e
     }
 });
 
+// Confirmação de agendamento
 document.getElementById("agendamentoForm").addEventListener("submit", function (e) {
     e.preventDefault();
     
@@ -116,6 +92,8 @@ document.getElementById("agendamentoForm").addEventListener("submit", function (
 
     if (confirmar) {
         alert("Agendamento confirmado com sucesso!");
+        // Aqui, você pode enviar o formulário ou realizar outras ações necessárias
+        this.submit(); // Envia o formulário se o agendamento for confirmado
     } else {
         alert("Agendamento cancelado.");
     }

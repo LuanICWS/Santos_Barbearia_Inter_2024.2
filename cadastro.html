@@ -22,7 +22,7 @@
 
         <h1>Cadastre-se</h1>
         
-        <form action="/submit_form" method="POST">
+        <form action="conexCadastro.php" method="POST">
 
             <!--Nome-->
             <div class="input-container">
@@ -37,9 +37,13 @@
             </div>
 
             <!--senha-->
+            <!-- senha -->
             <div class="input-container">
                 <i class="fa-solid fa-lock"></i>
-                <input type="password" id="password" name="password" placeholder="Senha" required="required">
+                <input type="password" id="password" name="password" placeholder="Senha" required="required" 
+                minlength="8" 
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$" 
+                title="A senha deve conter no mínimo 8 caracteres, incluindo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.">
             </div>
 
             <!--telefone-->
@@ -64,10 +68,12 @@
             <div class="radio-group">
                 <i class="fa-solid fa-user"></i>
                 <span>Sexo:</span>
-                <input type="radio" id="masc" name="sexo" value="h" required="required">
+                <input type="radio" id="masc" name="sexo" value="Masculino">
                 <label for="masc">Masculino</label>
-                <input type="radio" id="fem" name="sexo" value="f" required="required">
+                <input type="radio" id="fem" name="sexo" value="Feminino">
                 <label for="fem">Feminino</label>
+                <input type="radio" id="out" name="sexo" value="Outros">
+                <label for="out">Outros</label>
             </div>
 
             <!--checkboxes-->
