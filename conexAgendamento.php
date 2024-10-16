@@ -40,13 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($conn->query($sqlInsert) === TRUE) {
                 echo "Estamos te redirecionando para a home";
-                header("refresh:1;url=index.html");
+                header("refresh:1;url=index.php");
                 exit();
             } else {
                 echo "Erro ao inserir agendamento: " . $conn->error;
             }
         } else {
-            echo "Já existe um agendamento para esse cliente nessa data e horário.";
+            echo "<script type='text/javascript'>alert('Erro: Já existe um agendamento para esse cliente nessa data e horário.');</script>";
+            header("refresh:1;url=agendamento.html");
         }
     } else {
         echo "Erro: Usuário não encontrado.";
