@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usuario_telefone'] = $row['usuario_telefone'];
 
             // Redireciona para a página de agendamento
-            header('Location: agendamento.html');
+            header('Location: index.php');
             exit();
         } else {
             echo "Dados inseridos incorretamente!";
