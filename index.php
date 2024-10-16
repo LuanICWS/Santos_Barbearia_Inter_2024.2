@@ -1,3 +1,8 @@
+<?php
+require 'functions.php';
+session_start();
+$isLoggedIn = isset($_SESSION['usuario_id']);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -47,13 +52,18 @@
                 </ul>
 
                 <ul class="navbar-nav navbar-nav-right">
-                    <!-- Botões de Login e Cadastro alinhados à direita -->
-                    <li class="nav-item">
-                        <button><a href="login.html">Login</a></button>
-                    </li>
-                    <li class="nav-item">
-                        <button><a href="cadastro.html">Cadastrar</a></button>
-                    </li>
+                    <?php if ($isLoggedIn): ?>
+                        <li class="nav-item">
+                            <button><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></button> <!-- Ação de logout -->
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <button><a href="login.html">Login</a></button>
+                        </li>
+                        <li class="nav-item">
+                            <button><a href="cadastro.html">Cadastrar</a></button>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
@@ -146,7 +156,7 @@
             <tr><td>Moicano</td><td>R$ 85,00</td></tr>
             <tr><td>Undercut</td><td>R$ 85,00</td></tr>
           </table>
-          <a href="agendamento.html"><button class="reservar-btn">Efetue login</button></a>
+         <?php exibirBtnAgendamento(); ?>
         </div>
       </div>
 
@@ -162,7 +172,7 @@
             <tr><td>Barba Real</td><td>R$ 50,00</td></tr>
             <tr><td>Circular</td><td>R$ 50,00</td></tr>
           </table>
-          <a href="agendamento.html"><button class="reservar-btn">Efetue login</button></a>
+          <?php exibirBtnAgendamento(); ?>
         </div>
       </div>
       
@@ -177,7 +187,7 @@
             <tr><td>Joãozinho</td><td>R$ 150,00</td></tr>
             <tr><td>Repicado</td><td>R$ 150,00</td></tr>
           </table>
-          <a href="agendamento.html"><button class="reservar-btn">Efetue login</button></a>
+          <?php exibirBtnAgendamento(); ?>
         </div>
       </div>
 
@@ -193,7 +203,7 @@
             <tr><td>Ruivo</td><td>R$ 140,00</td></tr>
             <tr><td>Chocolate</td><td>R$ 14 0,00</td></tr>
           </table>
-          <a href="agendamento.html"><button class="reservar-btn">Efetue login</button></a>
+          <?php exibirBtnAgendamento(); ?>          
         </div>
       </div>
 
@@ -206,7 +216,7 @@
             <tr><td>Comum</td><td>R$ 50,00</td></tr>
             <tr><td>Especial</td><td>R$ 80,00</td></tr>
           </table>
-          <a href="agendamento.html"><button class="reservar-btn">Efetue login</button></a>
+          <?php exibirBtnAgendamento(); ?>
         </div>
       </div>
 
@@ -219,7 +229,7 @@
             <tr><td>Inversas</td><td>R$ 270,00</td></tr>
             <tr><td>Tradicionais</td><td>R$ 270,00</td></tr>
           </table>
-          <a href="agendamento.html"><button class="reservar-btn">Efetue login</button></a>
+          <?php exibirBtnAgendamento(); ?>
         </div>
       </div>
 
@@ -232,7 +242,7 @@
             <tr><td>Nariz</td><td>R$ 20,00</td></tr>
             <tr><td>Orelha</td><td>R$ 20,00</td></tr>
           </table>
-          <a href="agendamento.html"><button class="reservar-btn">Efetue login</button></a>
+          <?php exibirBtnAgendamento(); ?>
         </div>
       </div>
 
@@ -244,7 +254,7 @@
             <tr><th>Serviços</th><th>Preço</th></tr>
             <tr><td>Barboterapia</td><td>R$ 90,00</td></tr>
           </table>
-          <a href="agendamento.html"><button class="reservar-btn">Efetue login</button></a>
+          <?php exibirBtnAgendamento(); ?>
         </div>
       </div>
 
@@ -256,7 +266,7 @@
             <tr><th>Serviços</th><th>Preço</th></tr>
             <tr><td>Nanoblading</td><td>R$ 1500,00</td></tr>
           </table>
-          <a href="agendamento.html"><button class="reservar-btn">Efetue login</button></a>
+          <?php exibirBtnAgendamento(); ?>
         </div>
       </div>
 </body>
