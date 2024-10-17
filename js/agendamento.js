@@ -59,7 +59,7 @@ document.getElementById('hora').addEventListener('change', verificarFormulario);
 
 // Listener para enviar o formulário
 document.getElementById('agendamentoForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Evita o envio imediato do formulário
 
     const checkboxes = document.querySelectorAll('input[name="servicos[]"]:checked');
     const data = document.getElementById('data').value;
@@ -67,34 +67,17 @@ document.getElementById('agendamentoForm').addEventListener('submit', function(e
 
     const servicosSelecionados = Array.from(checkboxes).map(checkbox => checkbox.value).join(', ');
 
-    const resultado = document.getElementById('resultado');
+    if (data && hora && checkboxes.length > 0) {
+        const confirmar = confirm(`Deseja realmente agendar para ${data} às ${hora} horas?`);
 
-    if (data && hora) {
-        let mensagem = `Serviço agendado para ${data} às ${hora}.`;
-        if (servicosSelecionados) mensagem += ` Serviços: ${servicosSelecionados}.`;
-
-        resultado.textContent = mensagem;
-        resultado.style.display = 'block';
+        if (confirmar) {
+            alert(`Agendamento confirmado com sucesso! Para ${data} às ${hora}.
+                Serviços: ${servicosSelecionados}`);
+            this.submit(); // Envia o formulário após a confirmação
+        } else {
+            alert("Agendamento cancelado.");
+        }
     } else {
-        resultado.textContent = 'Por favor, selecione pelo menos um serviço e preencha a data e o horário.';
-        resultado.style.display = 'block';
-    }
-});
-
-// Confirmação de agendamento
-document.getElementById("agendamentoForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    
-    const data = document.getElementById("data").value;
-    const hora = document.getElementById("hora").value;
-
-    const confirmar = confirm(`Deseja realmente agendar para ${data} às ${hora} horas?`);
-
-    if (confirmar) {
-        alert("Agendamento confirmado com sucesso!");
-        // Aqui, você pode enviar o formulário ou realizar outras ações necessárias
-        this.submit(); // Envia o formulário se o agendamento for confirmado
-    } else {
-        alert("Agendamento cancelado.");
+        alert('Por favor, selecione pelo menos um serviço e preencha a data e o horário.');
     }
 });
