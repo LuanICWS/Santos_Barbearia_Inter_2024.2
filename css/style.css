@@ -201,38 +201,35 @@ button {
 
 /* |---------------------5.Sobre o Barbeiro------------------------------| */
 
+
+#sobre_barbeiro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000cb;
+    width: fit-content;
+    margin-inline: auto;
+    color: #e0e0e0;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
 /* Sobre o Barbeiro pag */
 
 #sobre_barbeiro h1 {
-
-    /* Centraliza o texto "SOBRE O BARBEIRO" */
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 700; /* Texto em negrito */
-    background-color: rgba(24, 24, 24, 0.8);
-    margin: 0;
-    border-radius: 15px; /* Bordas arredondadas */
+    margin-top: 10px;
+    padding: 15px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 /* texto sobre o barbeiro */
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
 #sobre_barbeiro p {
-    margin: 0;
-    font-size: 1.5em;
-    line-height: 1.6;
-    padding: 15px; 
-    background-color: rgba(24, 24, 24, 0.8);
-    color: #ffffff;
-    max-width: 100%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.6em;
     font-family:Arial, Helvetica, sans-serif;
-    border-radius: 15px; /* Bordas arredondadas */
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 .sobre-conteudo {
@@ -279,8 +276,7 @@ button {
 
 #servicos h1 {
     /* Centraliza o texto "AGENDE UM SERVICO" */
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: 700; /* Texto em negrito */
+    font-family: Arial, Helvetica, sans-serif;
     color: #e0e0e0;
     background-color: rgba(24, 24, 24, 0.8);
     text-align: center;
@@ -453,7 +449,41 @@ button {
         padding: 8px 16px; /* Reduz o padding do botão */
     }
 }
-/* |---------------------7.Imagens e Outros Estilos--------------------| */
+
+/* |---------------------7. Nossa Localização--------------------| */
+
+#LOC { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #111111c2;
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 15px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#LOC iframe {
+    width: 900px;
+    height: 500px;
+}
+
+#LOC h2 {
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px; 
+    margin-top: 5px;
+    padding: 15px;
+}
+
+
+
+/* |---------------------8.Imagens e Outros Estilos--------------------| */
 
 div img {
     margin-left: 10px;
@@ -467,91 +497,47 @@ div img:hover {
 /* |---------------------footer--------------------| */
 
 footer {
-    background-color: #333; /* Fundo escuro */
-    color: white; /* Texto branco */
-    padding: 20px 0; /* Espaçamento interno */
-    text-align: center; /* Centraliza o conteúdo */
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
 }
 
-footer{
-    background-color: black;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    
-}
 .footer-container {
-    display: flex; /* Usa Flexbox */
-    justify-content: space-around; /* Espaça os itens igualmente */
-    align-items: flex-start; /* Alinha os itens ao topo do footer */
-    max-width: 2000px; /* Limite de largura */
-    margin: 0 auto; /* Centraliza o container */
-    flex-wrap: wrap; /* Permite quebra de linha se necessário */
-    padding: 20px; /* Adiciona espaçamento interno para mais conforto */
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: black; /* Fundo do container para manter tudo dentro do footer */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.footer-container div {
+    flex: 1;
+    margin: 10px;
 }
 
 .footer-logo img {
-    width: 250px; /* Define o tamanho da logo */
-    margin: 30px;
+    max-width: 250px;
 }
 
-.footer-icons a {
-    margin: 0 5px; /* Espaço entre os ícones */
-}
-
-.footer-icons img {
-    width: 40px; /* Define o tamanho dos ícones */
-    height: 40px; /* Tamanho dos ícones */
-
-}
-
-
-.footer-hours p {
-    flex-direction: column; /* Coloca os itens um abaixo do outro */
-    height: 70px;
-    margin: 5px 0; /* Espaçamento vertical entre as linhas de texto */
-    margin-bottom: 30px;
-    font-size: 14px; /* Tamanho do texto */
-    padding: 20px;
-}
-
-#redes h5{
+.info, .social-media {
     text-align: center;
-    margin-left: 19px;
 }
 
-
-.footer-container {
-    display: flex; /* Flexbox para alinhar os itens */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Centraliza os itens verticalmente */
-    flex-wrap: wrap; /* Permite quebra de linha */
-    padding: 20px;
-    background-color: black;
+.social-media a {
+    margin: 0 10px;
 }
 
-.footer-localização {
-    width: 300px;
-    height: 250px;
-    background-color: black;
-    margin: 20px;
+.social-media img {
+    width: 40px;
+    height: 40px;
+    flex-direction: column;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column; /* Itens empilhados verticalmente em telas menores */
-        align-items: center; /* Centraliza os itens no eixo vertical */
-    }
-
-    .footer-localização {
-        width: 100%; /* A localização ocupa 100% da largura em dispositivos móveis */
-        max-width: 300px; /* Limita a largura máxima em telas pequenas */
-        margin-bottom: 20px; /* Espaçamento inferior */
-    }
+.social-media h5 {
+    font-family: Arial, Helvetica, sans-serif;
 }
-       
-   
-  
-  

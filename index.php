@@ -269,49 +269,45 @@ $isLoggedIn = isset($_SESSION['usuario_id']);
           <?php exibirBtnAgendamento(); ?>
         </div>
       </div>
+
+      <div>
+      <div id="LOC">
+
+    <h2>NOSSA LOCALIZAÇÃO</h2>
+        <iframe 
+          name="frame"
+          id="frame"
+          src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.827491061729!2d-34.90724382626844!3d-8.119040281249477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1f427968d6cb%3A0x34787df94f76a149!2sShopping%20Recife!5e0!3m2!1spt-BR!2sbr!4v1728933842101!5m2!1spt-BR!2sbr" width="300" height="250" style="border:0.5;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      </div>
+
 </body>
 
-<footer id="footer">
+<footer>
 
+  <div class="footer-container">
 
-    <div class="footer-container">
+      <div class="footer-logo">
+          <img src="assets/Rodape/Logo_Rodape.png" alt="logo rodapé">
+      </div>
 
-        <div class="footer-logo">
-        <img src="assets/Rodape/Logo_Rodape.png" alt="logo rodapé">
-        </div>
+      <div class="info">
+          <h4>HORÁRIOS DE ATENDIMENTO</h4>
+          <p>Seg-Sex: 9h às 18h</p>
+          <p>Sáb: 9h às 14h</p>
+      </div>
 
-        <div class= "footer-localização" id= "footer-localização">
-          <h3>Nossa Localização</h3>
-          <iframe
-              src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.827491061729!2d-34.90724382626844!3d-8.119040281249477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1f427968d6cb%3A0x34787df94f76a149!2sShopping%20Recife!5e0!3m2!1spt-BR!2sbr!4v1728933842101!5m2!1spt-BR!2sbr" width="300" height="250" style="border:0.5;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              width="25"
-              height="25"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-         </div>
-         
-         <div class="footer-container">
-        <div class="footer-hours">
-        <h4>Horários de Atendimento</h4>
-        <h5>Seg-Sex: 9h às 18h <br>
-            Sáb: 9h às 14h</h5>
-        </div>
+      <div class="social-media">
+          <h5>REDES SOCIAIS</h5>
+          <a href="https://www.instagram.com/santosbarbeiro.br/" target="_blank"><img src="assets/Rodape/instagram.png" alt="Instagram"></a>
+          <a href="https://wa.me/558199535210" target="_blank"><img src="assets/Rodape/whatsapp.png" alt="WhatsApp"></a>
+      </div>
+  </div>
 
-        <div class="footer-icons" id="redes"> 
-         <h5>REDES SOCIAIS</h5> 
-
-        <a href="https://www.instagram.com/santosbarbeiro.br/" target="_blank">
-            <img src="assets/Rodape/instagram.png" alt="Instagram" />
-        </a>
-        <a href="https://wa.me/558199535210" target="_blank">
-            <img src="assets/Rodape/whatsapp.png" alt="WhatsApp" />
-        </a>
-          </div>
-
-    </div>
 </footer>
 
 </html>
