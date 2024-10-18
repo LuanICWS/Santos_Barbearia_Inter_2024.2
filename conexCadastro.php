@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cpf = $_POST['cpf'];
     $nascimento = $_POST['nascimento'];
     $sexo = $_POST['sexo'];
-    $termos = isset($_POST['usuario_termos_obrigatorios']) ? 1 : 0;
-    $newsletter = isset($_POST['usuario_incricao_newsletter']) ? 1 : 0;
+    $termos = isset($_POST['termos']) ? 1 : 0;
+    $newsletter = isset($_POST['newsletter']) ? 1 : 0;
 
     // Remover a máscara do telefone
     $telefone = preg_replace('/\D/', '', $telefone); // Remove tudo que não for número
@@ -29,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executa a query
     if ($stmt->execute()) {
-        echo "Cadastro realizado com sucesso!";
-        header('Location: login.html');
+        echo "<script type='text/javascript'>alert('Cadastro realizado com sucesso!'); window.location.href = 'login.html';
+        </script>";
         exit();
     } else {
         echo "Erro: " . $stmt->error;
