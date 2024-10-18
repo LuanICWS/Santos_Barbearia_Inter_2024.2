@@ -100,7 +100,7 @@ h1 {
 p {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     color: rgb(255, 255, 255);
-    margin-left: 150px; /* Move o Botao mais pra direita*/
+    margin-left: 150px;
 }
 
 a {

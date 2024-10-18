@@ -78,7 +78,6 @@ $isLoggedIn = isset($_SESSION['usuario_id']);
             <img src="assets/Logo_1.png" alt="Logo">
         </div>
     <div class="slides">
-            <!-- Imagens do slider -->
             <div class="slide"><img src="assets/2.png" alt="Slide 2"></div>
             <div class="slide"><img src="assets/3.png" alt="Slide 3"></div>
             <div class="slide"><img src="assets/4.png" alt="Slide 4"></div>

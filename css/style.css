@@ -10,13 +10,13 @@
 
 /* Define a imagem de fundo para todo o site */
 body {
-    background-image: url('../assets/Fundo_Site_Barber.png'); /* Coloque o caminho da sua imagem aqui */
-    background-size: cover; /* Faz a imagem cobrir toda a área do site */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    background-position: center; /* Centraliza a imagem */
-    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
-    color: white; /* Mantém a cor do texto em branco */
-    font-size: 16px; /* Define o tamanho da fonte base */
+    background-image: url('../assets/Fundo_Site_Barber.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-attachment: fixed; 
+    color: white;
+    font-size: 16px;
 }
 
 
@@ -32,7 +32,7 @@ body {
 }
 
 .logo img {
-    max-width: 400px; /* Ajuste o tamanho da logo */
+    max-width: 400px;
 }
 
 
@@ -53,7 +53,7 @@ body {
     height: 100%; 
     margin: 0;
     padding: 0;
-    border-radius: 15px; /* Bordas arredondadas */
+    border-radius: 15px;
 }
 
 /* Define o tamanho e alinhamento das slides individuais */
@@ -150,47 +150,47 @@ button {
 
 /* Estilo dos links dentro dos botões */
 .nav-item button a {
-    color: black; /* Cor do texto do link */
-    font-weight: bold; /* Texto em negrito */
-    text-decoration: none; /* Remove o sublinhado do link */
+    color: black; 
+    font-weight: bold;
+    text-decoration: none;
 }
 
 /* Estilo dos botões na barra de navegação ao passar o mouse */
 .nav-item button:hover {
-    background-color: rgb(173, 121, 15); /* Cor de fundo mais escura no hover */
+    background-color: rgb(173, 121, 15);
 }
 
 /* Estilo para a parte esquerda da barra de navegação */
 .navbar-nav-left {
     display: flex;
-    flex-grow: 1; /* Permite que o container ocupe o espaço disponível */
+    flex-grow: 1;
 }
 
 /* Estilo para a parte direita da barra de navegação */
 .navbar-nav-right {
     display: flex;
-    margin-left: auto; /* Alinha à direita */
+    margin-left: auto;
     margin-top: 30px;
 }
 
 /* Estilo da barra de navegação personalizada */
 .custom-navbar {
-    background-color: #111111; /* Substitua #333 pela cor desejada */
+    background-color: #111111;
     padding: 0.5rem 1rem;
-    opacity: 0.8; /* Define a opacidade da navbar */
+    opacity: 0.8;
 }       
 
 .custom-navbar .container-fluid {
-    padding: 0; /* Remove o padding do container se necessário */
+    padding: 0;
     
 }
 
 .custom-navbar .navbar-nav {
-    margin-left: auto; /* Garante que os itens sejam alinhados corretamente */
+    margin-left: auto;
 }
 
 .custom-navbar .nav-item {
-    margin: -1px; /* Remove o margin se necessário */
+    margin: -1px;
 }
 
 #Home_BNT {
@@ -240,28 +240,28 @@ button {
     flex-wrap: wrap;
     margin-top: 30px;
     margin-bottom: 5pc;
-    gap: 20px; /* Espaçamento entre a imagem e o texto */
-    border-radius: 15px; /* Bordas arredondadas */
+    gap: 20px;
+    border-radius: 15px;
         
 }
 
 .sobre-conteudo img {
-    max-width: 380px; /* Define o tamanho máximo da imagem */
-    border-radius: 10px; /* Bordas arredondadas na imagem */
+    max-width: 380px;
+    border-radius: 10px;
 }
 
 
 .imagem-barbeiro {
-    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-    flex: 1; /* Faz o texto ocupar o espaço restante */
+    width: 200px; 
+    height: auto;
+    flex: 1; 
    
 }
 
 
 .sobre_texto {
-    max-width: 680px; /* Limita a largura do texto */
-    border-radius: 20px; /* Bordas arredondadas */
+    max-width: 680px;
+    border-radius: 20px;
     
 }
 
@@ -273,7 +273,7 @@ button {
         text-align: center;
     }}
 
-/* |---------------------6.Grid e Itens / Agendamento de servicos-------------------------------| */
+/* |---------------------6.Agendamento de servicos / Grid e Itens -------------------------------| */
 
 #servicos h1 {
     /* Centraliza o texto "AGENDE UM SERVICO" */
@@ -286,8 +286,8 @@ button {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
-    gap: 30px; /* Espaçamento entre os itens */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
     padding: 20px;
 
 }
@@ -305,8 +305,8 @@ button {
     cursor: pointer;
     font-family:Arial, Helvetica, sans-serif;
 
-    max-width: 200px;  /* Ajuste a largura máxima */
-    max-height: 200px; /* Ajuste a altura máxima, se necessário */
+    max-width: 200px;  
+    max-height: 200px; 
     margin-left: 130px;
     font-weight: 600;
     
@@ -321,8 +321,8 @@ button {
 
 /* Largura e Altura dos Icones */
 .grid-item img {
-    width: 50px; /* Largura */
-    height: 50px; /* Altura */
+    width: 50px; 
+    height: 50px; 
     margin-bottom: 10px;
     
 }
@@ -338,14 +338,14 @@ button {
 /* Responsividade */
 @media (max-width: 1024px) {
     .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 }
 
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr; /* 1 coluna em dispositivos móveis */
+        grid-template-columns: 1fr;
         gap: 15px;
     }}
 
@@ -412,11 +412,11 @@ button {
 
   .reservar-btn {
     display: block;
-    margin: auto; /* Centraliza o botão */
+    margin: auto;
     margin-top: 50px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #aaaaaa; /* Verde */
+    background-color: #aaaaaa;
     color: white;
     border: none;
     border-radius: 5px;
@@ -425,31 +425,31 @@ button {
   }
   
   .reservar-btn:hover {
-    background-color: #45a049; /* Efeito hover */
+    background-color: #45a049
   }
 
   /* Responsividade para a modal */
 @media (max-width: 1024px) {
     .modal-content {
-        width: 80%; /* Aumenta a largura para 80% em tablets */
-        padding: 15px; /* Reduz o padding para telas menores */
+        width: 80%; 
+        padding: 15px;
     }
 }
 
 @media (max-width: 768px) {
     .modal-content {
-        width: 95%; /* Aumenta a largura para 95% em dispositivos móveis */
-        margin: 5% auto; /* Reduz a margem superior */
-        padding: 10px; /* Padding menor para telas pequenas */
+        width: 95%; 
+        margin: 5% auto; 
+        padding: 10px;
     }
 
     .close {
-        font-size: 20px; /* Diminui o tamanho do botão de fechar */
+        font-size: 20px;
     }
 
     .reservar-btn {
-        font-size: 14px; /* Diminui o tamanho do texto no botão */
-        padding: 8px 16px; /* Reduz o padding do botão */
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
 
@@ -460,7 +460,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: transparent; /* Altere para transparente se não quiser fundo escuro */
+    background-color: transparent;
     width: fit-content;
     margin-inline: auto;
     margin-top: 8px;
@@ -472,8 +472,8 @@ button {
 #BRANCO {
     background-color: #ffffff;
     width: 100%;
-    height: auto; /* Ajusta a altura para ser automática */
-    padding: 20px; /* Adiciona espaçamento interno */
+    height: auto;
+    padding: 20px;
 }
 
 #LOC iframe {
@@ -484,7 +484,7 @@ button {
 #LOC h1 {
     display: flex;
     justify-content: center;
-    color: rgb(0, 0, 0); /* Muda a cor para preto para melhor contraste com fundo branco */
+    color: rgb(0, 0, 0);
     font-family: 'Playfair Display', serif;
     font-weight: 900;
     margin-top: 5px;
