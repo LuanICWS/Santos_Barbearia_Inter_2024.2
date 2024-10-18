@@ -39,15 +39,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                           VALUES ('$usuario_id', '$nome', '$email', '$telefone', '$data', '$hora', '$servicos_json')";
 
             if ($conn->query($sqlInsert) === TRUE) {
-                echo "Estamos te redirecionando para a home";
-                header("refresh:1;url=index.php");
+                echo "<script> window.location.href = 'index.php';
+                </script>";
                 exit();
             } else {
                 echo "Erro ao inserir agendamento: " . $conn->error;
             }
         } else {
-            echo "<script type='text/javascript'>alert('Erro: Já existe um agendamento para esse cliente nessa data e horário.');</script>";
-            header("refresh:1;url=agendamento.html");
+            echo "<script type='text/javascript'>alert('Erro: Já existe um agendamento para esse cliente nessa data e horário.'); window.location.href = 'agendamento.html';
+            </script>";
         }
     } else {
         echo "Erro: Usuário não encontrado.";
