@@ -23,6 +23,9 @@ $isLoggedIn = isset($_SESSION['usuario_id']);
     <!-- Scripts -->
     <script src="js/slider.js" defer></script>
     <script src="js/modal.js" defer></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="style.css">
+
 </head>
 
 <body>
@@ -270,10 +273,10 @@ $isLoggedIn = isset($_SESSION['usuario_id']);
         </div>
       </div>
 
-      <div>
+      <div id="BRANCO">
       <div id="LOC">
 
-    <h2>NOSSA LOCALIZAÇÃO</h2>
+    <h1>NOSSA LOCALIZAÇÃO</h1>
         <iframe 
           name="frame"
           id="frame"

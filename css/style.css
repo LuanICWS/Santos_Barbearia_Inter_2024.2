@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Para textos corridos */
 }
 
 /* Define a imagem de fundo para todo o site */
@@ -220,14 +221,14 @@ button {
 #sobre_barbeiro h1 {
     margin-top: 10px;
     padding: 15px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
 }
 
 /* texto sobre o barbeiro */
 
 #sobre_barbeiro p {
     font-size: 1.6em;
-    font-family:Arial, Helvetica, sans-serif;
     margin-right: 15px;
     margin-left: 15px;
 }
@@ -276,10 +277,11 @@ button {
 
 #servicos h1 {
     /* Centraliza o texto "AGENDE UM SERVICO" */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Playfair Display', serif;
     color: #e0e0e0;
     background-color: rgba(24, 24, 24, 0.8);
     text-align: center;
+    font-weight: 800;
 }
 
 .grid-container {
@@ -306,6 +308,7 @@ button {
     max-width: 200px;  /* Ajuste a largura máxima */
     max-height: 200px; /* Ajuste a altura máxima, se necessário */
     margin-left: 130px;
+    font-weight: 600;
     
 }
 
@@ -457,13 +460,20 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #111111c2;
+    background-color: transparent; /* Altere para transparente se não quiser fundo escuro */
     width: fit-content;
     margin-inline: auto;
-    margin-top: 15px;
-    border: 2px solid rgb(255, 255, 255);
+    margin-top: 8px;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 20px;
     overflow: hidden;
+}
+
+#BRANCO {
+    background-color: #ffffff;
+    width: 100%;
+    height: auto; /* Ajusta a altura para ser automática */
+    padding: 20px; /* Adiciona espaçamento interno */
 }
 
 #LOC iframe {
@@ -471,12 +481,12 @@ button {
     height: 500px;
 }
 
-#LOC h2 {
+#LOC h1 {
     display: flex;
     justify-content: center;
-    color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 10px; 
+    color: rgb(0, 0, 0); /* Muda a cor para preto para melhor contraste com fundo branco */
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
     margin-top: 5px;
     padding: 15px;
 }
@@ -501,7 +511,6 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    margin-top: 30px;
 }
 
 .footer-container {
@@ -511,8 +520,9 @@ footer {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: bold;
+    font-weight: 900;
 }
 
 .footer-container div {
@@ -539,5 +549,10 @@ footer {
 }
 
 .social-media h5 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.info h4 {
+    font-weight: 600;
 }
