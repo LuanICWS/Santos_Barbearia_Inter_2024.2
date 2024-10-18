@@ -25,13 +25,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usuario_telefone'] = $row['usuario_telefone'];
 
             // Redireciona para a página de agendamento
-            header('Location: index.php');
-            exit();
+            echo "<script type='text/javascript'>
+                alert('Seja bem-vindo, {$_SESSION['usuario_nome']}!');
+                window.location.href = 'index.php';
+            </script>";
+        exit();
         } else {
-            echo "Dados inseridos incorretamente!";
+            echo "<script type='text/javascript'>alert('Dados inseridos incorretamente! Tente novamente.'); window.location.href = 'login.html';</script>";
         }
     } else {
-        echo "Nenhum usuário encontrado com este email!";
+        echo "<script type='text/javascript'>alert('Erro: Não encontramos nenhum usúario com este email!'); window.location.href = 'login.html';</script>";
     }
 
     // Fecha a declaração
