@@ -200,7 +200,7 @@ button {
 }
 
 
-/* |---------------------5.Sobre o Barbeiro------------------------------| */
+/* |---------------------5. Sobre o Barbeiro ------------------------------| */
 
 
 #sobre_barbeiro{
@@ -273,7 +273,7 @@ button {
         text-align: center;
     }}
 
-/* |---------------------6.Agendamento de servicos / Grid e Itens -------------------------------| */
+/* |---------------------6. Agendamento de servicos / Grid e Itens -------------------------------| */
 
 #servicos h1 {
     /* Centraliza o texto "AGENDE UM SERVICO" */
@@ -453,7 +453,7 @@ button {
     }
 }
 
-/* |---------------------7. Nossa Localização--------------------| */
+/* |---------------------7. Nossa Localização --------------------| */
 
 #LOC { 
     display: flex;
@@ -493,7 +493,7 @@ button {
 
 
 
-/* |---------------------8.Imagens e Outros Estilos--------------------| */
+/* |---------------------8.Imagens e Outros Estilos --------------------| */
 
 div img {
     margin-left: 10px;
