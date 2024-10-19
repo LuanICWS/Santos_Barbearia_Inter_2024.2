@@ -143,7 +143,7 @@ $isLoggedIn = isset($_SESSION['usuario_id']);
               <img src="../Santos_Barbearia_Inter_2024.2/assets/Servicos/nanoblading.png" alt="Nanoblading">
               <span>Nanoblading</span>
           </a>
-        </div> <!-- Fechando a div grid-container -->
+        </div> <!-- Fechando a div grid - container -->
     </section>
 
     <div id="modalCorte" class="modal">
