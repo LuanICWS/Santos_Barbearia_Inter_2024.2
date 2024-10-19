@@ -491,6 +491,26 @@ button {
     padding: 15px;
 }
 
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    #LOC{
+        flex-direction: column;
+        text-align: center;
+    }}
+
+    @media screen and (max-width: 768px) {
+        #LOC iframe  {
+            flex-direction: column;
+            text-align: center;
+        }}
+
+        @media screen and (max-width: 768px) {
+            #LOC h1  {
+                flex-direction: column;
+                text-align: center;
+            }}
+
+
 
 
 /* |---------------------8.Imagens e Outros Estilos --------------------| */
